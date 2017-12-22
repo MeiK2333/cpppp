@@ -18,7 +18,7 @@
 ```C++
 int a = { 24 };
 int b{ 36 };  // C++11
-int c = {};  // c++11
+int c = {};  // C++11
 int d{};  // C++11
 ```
 
@@ -100,3 +100,4 @@ vector<double>::iterator pv = scores.begin();
 vector<double> scores;
 auto pv = scores.begin();
 ```
+[3-4-5.cpp](3-4-5.cpp)
