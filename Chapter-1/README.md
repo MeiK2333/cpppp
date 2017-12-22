@@ -1,7 +1,7 @@
 # Chapter 1 预备知识
 
 ## 目录
-* [1.4.4: cin.get](#cin.get)
+* [1.4.4: cin.get](#cinget)
 
 ### cin.get
 
