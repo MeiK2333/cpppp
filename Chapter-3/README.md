@@ -5,6 +5,10 @@
 * [3.1.6: 进制表示](#进制表示)
 * [3.1.8: cout.put](#coutput)
 * [3.1.8.3: '\b'](#'\b')
+* [3.1.8.5: char的类型](#char的类型)
+* [3.2: 定义符号常量](#定义符号常量)
+* [3.4.4.5: 强制类型转换](#强制类型转换)
+* [3.4.5: auto](#auto)
 
 
 ### 单值变量初始化
@@ -55,3 +59,44 @@ cin >> num;  // 依旧为十六进制
 - 显示为一个小矩形（当输出到文件是显示为矩形（win10、VS2017））
 
 
+### char的类型
+
+char根据C++的实现不同，可能默认为有/无符号。
+
+可以通过 unsigned 与 signed 显式的指定。
+
+
+### wchar_t
+
+wchar_t 用于拓展字符集，输入输出使用 wcin、 wcout。
+可以通过添加前缀 L 来指示宽字符串。[3-1-8-6.cpp](3-1-8-6.cpp)
+
+
+### 定义符号常量
+
+尽量使用 const 而非 #define 来定义符号常量
+
+
+### 强制类型转换
+
+强制类型转换可以使用 (typeName)value 或者 typeName(value) 的方式，C++ 中更适用后者。
+
+
+### auto
+
+auto 可以用于自动推断变量类型。例如：
+```C++
+auto a = 1;  // a 是 int 类型
+auto b = 0.0;  // b 是 double 类型
+```
+
+对于基本类型使用 auto 显得意义不大，且可能造成混乱。 auto 的优势在于处理复杂类型。例如：
+```C++
+// old
+vector<double> scores;
+vector<double>::iterator pv = scores.begin();
+
+// new
+vector<double> scores;
+auto pv = scores.begin();
+```
