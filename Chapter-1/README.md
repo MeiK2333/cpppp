@@ -32,6 +32,7 @@ a b c d
 Output:
 a
 
+
 Input:
 a
 
